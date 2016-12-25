@@ -1,6 +1,6 @@
 #multimeter
 
-ÀûÓÃArduino£¬²âÁ¿µç×èµçÑ¹£¬ÔÚOLEDÊı×ÖÏÔÊ¾£¬¿ÉÒÔÔÚÎ¢ĞÅ¶ËÏÔÊ¾¡£
+åˆ©ç”¨Arduinoï¼Œæµ‹é‡ç”µé˜»ç”µå‹ï¼Œåœ¨OLEDæ•°å­—æ˜¾ç¤ºï¼Œå¯ä»¥åœ¨å¾®ä¿¡ç«¯æ˜¾ç¤ºã€‚
 
 Learn more about this, click the link below:
 
