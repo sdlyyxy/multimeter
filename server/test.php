@@ -1,6 +1,12 @@
 <?php
 //接收微信后台的消息并回复
 //没有校验signature，懒得。。
+//signature是包含token计算出的SHA1
+//FromUserName: OpenID
+//参见：
+//https://developers.weixin.qq.com/doc/offiaccount/Getting_Started/Getting_Started_Guide.html
+//https://developers.weixin.qq.com/doc/offiaccount/Message_Management/Receiving_standard_messages.html
+//https://developers.weixin.qq.com/doc/offiaccount/Message_Management/Passive_user_reply_message.html
 	file_put_contents("log",date('Y-m-d H:i:s',time())." A REQUEST\n",FILE_APPEND);
     $postArr = $HTTP_RAW_POST_DATA;
 	$postObj = simplexml_load_string( $postArr );
@@ -19,7 +25,7 @@
 	</xml>";
 	if( strtolower( $postObj->MsgType) == 'event'){
 		if( strtolower($postObj->Event == 'subscribe') ){
-			$content  = '欢迎关注！快来发送"get"，读取精确度数吧！[Joyful]';
+			$content  = '欢迎关注！快来发送"get"，读取精确读数吧！[Joyful]';
 			$info = sprintf($template, $toUser, $fromUser, $time, $msgType, $content);
 			echo $info;
 			return;
